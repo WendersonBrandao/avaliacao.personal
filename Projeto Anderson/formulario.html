@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avaliação | Personal Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="wrap">
+      <a class="logo" href="index.html">Anderson.personal</a>
+      <nav>
+        <a href="index.html#dicas">Dicas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-pagina">
+    <div class="wrap">
+      <h1>Formulário de anamnese completa</h1>
+      <p class="intro">Responda com calma. Ao final, clique em "Enviar avaliação" e suas respostas abrirão no WhatsApp, prontas para envio.</p>
+
+      <form id="anamnese" novalidate>
+
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <div class="campo"><label for="nome">Nome</label><input type="text" id="nome" required></div>
+          <div class="duas">
+            <div class="campo">
+              <span class="rotulo">Sexo</span>
+              <div class="opcoes linha">
+                <label><input type="radio" name="sexo" value="Feminino" required> Feminino</label>
+                <label><input type="radio" name="sexo" value="Masculino"> Masculino</label>
+                <label><input type="radio" name="sexo" value="Outro"> Outro</label>
+              </div>
+            </div>
+            <div class="campo"><label for="nasc">Data de nascimento</label><input type="date" id="nasc" required></div>
+          </div>
+          <div class="duas">
+            <div class="campo"><label for="email">E-mail</label><input type="email" id="email" required></div>
+            <div class="campo"><label for="contato">Contato (WhatsApp)</label><input type="tel" id="contato" placeholder="(21) 99999-9999" required></div>
+          </div>
+          <div class="duas">
+            <div class="campo"><label for="peso">Peso (kg)</label><input type="number" id="peso" step="0.1" min="20" max="400" required></div>
+            <div class="campo"><label for="altura">Altura (cm)</label><input type="number" id="altura" min="100" max="250" required></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Histórico de saúde</legend>
+          <div class="campo"><label for="lesoes">Histórico de lesões</label><textarea id="lesoes"></textarea></div>
+          <div class="campo"><label for="medicamentos">Uso de medicamentos</label><textarea id="medicamentos"></textarea></div>
+          <div class="campo"><label for="dores">Histórico de dores</label><textarea id="dores"></textarea></div>
+          <div class="campo"><label for="cirurgias">Histórico de cirurgias</label><textarea id="cirurgias"></textarea></div>
+          <div class="campo"><label for="cronicas">Histórico de doenças crônicas</label><textarea id="cronicas"></textarea></div>
+          <div class="campo"><label for="familia">Histórico de doenças na família</label><textarea id="familia"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Alimentação</legend>
+          <div class="campo">
+            <span class="rotulo">Sua alimentação tem o acompanhamento de um nutricionista?</span>
+            <div class="opcoes linha">
+              <label><input type="radio" name="nutri" value="Sim" required> Sim</label>
+              <label><input type="radio" name="nutri" value="Não"> Não</label>
+            </div>
+          </div>
+          <div class="campo"><label for="rotina-alim">Descreva brevemente a sua rotina alimentar</label><textarea id="rotina-alim"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Experiência com exercício</legend>
+          <div class="campo">
+            <span class="rotulo">Você já pratica exercício físico?</span>
+            <div class="opcoes linha">
+              <label><input type="radio" name="pratica" value="Sim" required> Sim</label>
+              <label><input type="radio" name="pratica" value="Não"> Não</label>
+            </div>
+          </div>
+          <div class="campo"><label for="tipos">Quais tipos de exercício e quantidade?</label><textarea id="tipos"></textarea></div>
+          <div class="campo"><label for="experiencia">Qual é sua experiência com exercício físico?</label><textarea id="experiencia"></textarea></div>
+          <div class="campo"><label for="prazer">Quais tipos de exercício você tem mais prazer em praticar?</label><textarea id="prazer"></textarea></div>
+          <div class="campo"><label for="tentativas">Quantas vezes já tentou ter consistência com os treinos e não conseguiu?</label><input type="text" id="tentativas"></div>
+          <div class="campo"><label for="tempomax">Qual foi o tempo máximo que você aderiu a um programa de treinamento físico?</label><input type="text" id="tempomax"></div>
+
+          <div class="campo">
+            <span class="rotulo">Sobre o tipo de treino, a seguinte frase te define melhor:</span>
+            <div class="opcoes">
+              <label><input type="radio" name="tipo-treino" value="Gosto muito de musculação, mas não gosto de treino aeróbio" required> Gosto muito de musculação, mas não gosto de treino aeróbio.</label>
+              <label><input type="radio" name="tipo-treino" value="Gosto muito de musculação e de aeróbio (sem preferência)"> Gosto muito de musculação e de aeróbio (sem preferência por um dos dois).</label>
+              <label><input type="radio" name="tipo-treino" value="Gosto muito de aeróbio, mas não gosto de musculação"> Gosto muito de aeróbio, mas não gosto de musculação.</label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <span class="rotulo">Pra você, treinar é:</span>
+            <div class="opcoes">
+              <label><input type="radio" name="treinar-e" value="Extremamente prazeroso, não vejo a hora de treinar" required> Extremamente prazeroso, não vejo a hora de treinar.</label>
+              <label><input type="radio" name="treinar-e" value="Só sinto prazer na hora que já estou treinando"> Só sinto prazer na hora que já estou treinando.</label>
+              <label><input type="radio" name="treinar-e" value="Não é ruim, mas também não é uma das minhas atividades favoritas"> Não é ruim, mas também não é uma das minhas atividades favoritas.</label>
+              <label><input type="radio" name="treinar-e" value="Odeio treinar, só faço porque preciso e quero muito mudar o corpo"> Odeio treinar, só faço isso porque preciso e quero muito mudar o corpo.</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Objetivos e metas</legend>
+          <div class="campo"><label for="objetivo">Qual é seu objetivo com a prática de exercício físico?</label><textarea id="objetivo"></textarea></div>
+          <div class="campo"><label for="corpo">O que você quer que aconteça com o seu corpo com a prática de exercício físico?</label><textarea id="corpo"></textarea></div>
+          <div class="campo">
+            <span class="rotulo">Quais são suas metas específicas com o exercício físico?</span>
+            <div class="opcoes">
+              <label><input type="radio" name="meta" value="Definição muscular máxima sem muito volume muscular" required> Definição muscular máxima, sem muito volume muscular.</label>
+              <label><input type="radio" name="meta" value="Equilíbrio entre definição muscular e volume muscular"> Equilíbrio entre definição muscular e volume muscular.</label>
+              <label><input type="radio" name="meta" value="Foco em volume muscular tentando não perder definição muscular"> Foco em volume muscular, tentando não perder definição muscular.</label>
+              <label><input type="radio" name="meta" value="Foco máximo em volume muscular, mesmo perdendo definição muscular"> Foco máximo em volume muscular, mesmo perdendo definição muscular.</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Disponibilidade</legend>
+          <div class="campo">
+            <span class="rotulo">Você possui acesso a uma academia?</span>
+            <div class="opcoes linha">
+              <label><input type="radio" name="academia" value="Sim" required> Sim</label>
+              <label><input type="radio" name="academia" value="Não"> Não</label>
+            </div>
+          </div>
+          <div class="campo">
+            <span class="rotulo">Qual é a sua disponibilidade de dias para treinar?</span>
+            <div class="opcoes linha" id="dias">
+              <label><input type="checkbox" value="Segunda"> Segunda</label>
+              <label><input type="checkbox" value="Terça"> Terça</label>
+              <label><input type="checkbox" value="Quarta"> Quarta</label>
+              <label><input type="checkbox" value="Quinta"> Quinta</label>
+              <label><input type="checkbox" value="Sexta"> Sexta</label>
+            </div>
+          </div>
+          <div class="campo"><label for="horario">Sua disponibilidade de horário</label><input type="text" id="horario" placeholder="Ex.: 18h às 19h"></div>
+          <div class="campo">
+            <span class="rotulo">Sua disponibilidade varia ou é sempre fixa?</span>
+            <div class="opcoes linha">
+              <label><input type="radio" name="varia" value="Varia" required> Varia</label>
+              <label><input type="radio" name="varia" value="É sempre fixa"> É sempre fixa</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Autorização de imagem</legend>
+          <div class="campo">
+            <span class="rotulo">Você autoriza a utilização de fotos cedidas com a sua permissão (de resultados antes e depois) para motivação e inspiração de outros alunos?</span>
+            <div class="opcoes linha">
+              <label><input type="radio" name="fotos" value="Sim" required> Sim</label>
+              <label><input type="radio" name="fotos" value="Não"> Não</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <p class="erro" id="erro" role="alert"></p>
+        <button class="btn" type="submit">Enviar avaliação</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="rodape" id="contato">
+    <div class="wrap">
+      <div>
+        <h3>Sobre</h3>
+        <p>Personal trainer focado em resultados reais, com treino individual, acompanhamento e orientação para o seu objetivo.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/5521967694356">(21) 96769-4356</a></li>
+          <li>E-mail: <a href="andersonsousa.personal@gmail.com">andersonsousa.personal@gmail.com</a></li>
+          <li>Rio de Janeiro, RJ</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Redes sociais</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/andersosousa.personal/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/andersosousa.personal/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/@andersosousa.personal/" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@andersosousa.personal/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Anderson Sousa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
